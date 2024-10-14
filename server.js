@@ -1,31 +1,27 @@
-const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const userRoutes = require('./routes/userRoutes');
-const employeeRoutes = require('./routes/employeeRoutes');
-
-dotenv.config();
+const express = require('express');
+require('dotenv').config();
+const employeeRoute = require('./routes/empRoutes'); 
+const userRoute = require('./routes/userRoutes'); 
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(express.json());
-
-// Routes
-app.use('/api/v1/user', userRoutes);
-app.use('/api/v1/emp', employeeRoutes);
-
-// Define a root route for '/'
-app.get('/', (req, res) => {
-  res.send('Welcome to the API!'); // You can customize this message as needed
-});
+app.use(express.json()); // Make sure to include this to parse JSON request bodies
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+mongoose.connect(process.env.MONGO_URI, {
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Routes
+app.use("/api/v1/user", userRoute);
+app.use("/api/v1/emp", employeeRoute);
+app.get('/', (req, res) => {
+    res.send("<h1>Welcome to Assignment 1</h1>");
 });
+
+// Start the server
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
