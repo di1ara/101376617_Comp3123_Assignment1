@@ -32,8 +32,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send("<h1>Welcome to Assignment 1</h1>");
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); 
 });
-
 // Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
