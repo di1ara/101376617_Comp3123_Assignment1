@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "ed410a30-52dd-4138-95e0-5e7fc6e213e0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31702458"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/emp/employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"email\": \"john.doe@example.com\",\n  \"department\": \"Engineering\",\n  \"position\": \"Software Engineer\",\n  \"salary\": 75000,\n  \"date_of_joining\": \"2023-05-20\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/emp/employees",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"emp",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/emp/employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/emp/employees",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"emp",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/user/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"johndoe\",\n  \"email\": \"john.doe@example.com\",\n  \"password\": \"strongpassword123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/user/signup",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/emp/employees/670c71b2412ea89aa58714bc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/emp/employees/670c71b2412ea89aa58714bc",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"emp",
+						"employees",
+						"670c71b2412ea89aa58714bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"johndoe\",\n  \"password\": \"strongpassword123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/emp/employees/670c71b2412ea89aa58714bc",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/emp/employees/670c71b2412ea89aa58714bc",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"emp",
+						"employees",
+						"670c71b2412ea89aa58714bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://0.0.0.0:5000/api/v1/emp/employees?eid=670c71b2412ea89aa58714bc",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:5000/api/v1/emp/employees?eid=670c71b2412ea89aa58714bc",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"emp",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "eid",
+							"value": "670c71b2412ea89aa58714bc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
